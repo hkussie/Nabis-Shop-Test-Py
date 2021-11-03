@@ -13,7 +13,7 @@ class NullValueSignupSubmitButtonTest(unittest.TestCase):
 		self.driver = webdriver.Chrome()
 
 	# Navigate to the age restriction modal, hit enter button and then scroll down to the bottom of the page
-	def test_age_modal_enter_button(self):
+	def test_null_value_response(self):
 		driver = self.driver 
 		driver.get("http://shop.nabis.com/")
 		time.sleep(5)

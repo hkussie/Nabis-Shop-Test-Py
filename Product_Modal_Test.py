@@ -13,7 +13,7 @@ class TestProductModal(unittest.TestCase):
 		self.driver = webdriver.Chrome()
 
 	# Navigate to the age restriction modal, hit enter button, validate elements in modal, click outside of modal
-	def test_age_modal_enter_button(self):
+	def test_outer_modal_click_exit(self):
 		driver = self.driver 
 		driver.get("http://shop.nabis.com/")
 		time.sleep(5)
