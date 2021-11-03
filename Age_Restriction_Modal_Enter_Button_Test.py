@@ -14,10 +14,10 @@ class TestAgeRestrictionRedirectionModal(unittest.TestCase):
 		self.driver = webdriver.Chrome()
 
 	# Navigate to the age restriction modal, hit enter button and then scroll down to the bottom of the page
-	def test_age_modal_redirection(self):
+	def test_age_modal_enter_button(self):
 		driver = self.driver 
 		driver.get("http://shop.nabis.com/")
-		driver.implicitly_wait(10)
+		time.sleep(10)
 		driver.find_element_by_xpath('/html/body/div[3]/div/div[3]/span/button').click()
 		driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 		

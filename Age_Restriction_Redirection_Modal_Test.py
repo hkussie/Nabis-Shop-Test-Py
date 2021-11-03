@@ -1,3 +1,4 @@
+import time 
 import unittest 
 from selenium import webdriver
 import chromedriver_binary
@@ -8,15 +9,15 @@ from selenium.webdriver.common.keys import Keys
 
 class TestAgeRestrictionRedirectionModal(unittest.TestCase): 
 
-	# Setup browser
+	# Create browser instance
 	def setUp(self):
 		self.driver = webdriver.Chrome()
 
-	# Navigate to the age restriction modal
+	# Main test method
 	def test_age_modal_redirection(self):
 		driver = self.driver 
 		driver.get("http://shop.nabis.com/")
-		driver.implicitly_wait(10)
+		time.sleep(10)
 		driver.find_element_by_xpath('/html/body/div[3]/div/div[3]/a/span/button').click()
 		self.redirectURL = driver.current_url
 		self.expectedURL = "https://www.nabis.com/"
